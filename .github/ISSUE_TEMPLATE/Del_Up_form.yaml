@@ -1,0 +1,46 @@
+name: Delete/Update Issue Form
+description: File a delete or update report.
+title: "[D/U Form]: "
+labels: ["enhancement", "triage"]
+projects: ["octo-org/1", "octo-org/44"]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this Delete/Update report!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: dropdown
+    id: delete_update
+    attributes:
+      label: Modification Type
+      description: What type of modification are you requesting?
+      options:
+        - Delete
+        - Update
+    validations:
+      required: true
+  - type: dropdown
+    id: Component
+    attributes:
+      label: What component/class of component do you what to update?
+      options:
+        - Inventario
+        - Componenti
+        - Processore
+        - Scheda Madre
+        - Periferiche
+  - type: textarea
+    id: logs
+    attributes:
+      label: Precise Description of the modification
+      description: Please provide a detailed description of the modification you are requesting.
+      placeholder: ex. I would like to delete the component "X" because...
