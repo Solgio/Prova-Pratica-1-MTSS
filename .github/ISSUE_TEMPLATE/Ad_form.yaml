@@ -1,0 +1,36 @@
+name: Add Issue Form
+description: File an add report.
+title: "[Add Form]: "
+labels: ["enhancement", "triage"]
+projects: ["octo-org/1", "octo-org/44"]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this add report!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: dropdown
+    id: Component
+    attributes:
+      label: What component/class of component do you what to update?
+      options:
+        - Inventario
+        - Componenti
+        - Processore
+        - Scheda Madre
+        - Periferiche
+  - type: textarea
+    id: logs
+    attributes:
+      label: Precise Description of the addition
+      description: Please provide a detailed description of the addition you are requesting.
+      placeholder: ex. I would like to add the component "X" because...
